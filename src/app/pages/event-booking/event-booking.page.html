@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-title>🎟️ Book Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="booking-card">
+    <h2 class="event-name">{{ eventName }}</h2>
+    <p class="price-info">Price per ticket: <strong>₹{{ price }}</strong></p>
+
+    <div class="ticket-control">
+      <ion-button fill="clear" class="circle-btn" (click)="decreaseCount()">
+        <ion-icon name="remove-outline"></ion-icon>
+      </ion-button>
+
+      <div class="ticket-count">{{ ticketCount }}</div>
+
+      <ion-button fill="clear" class="circle-btn" (click)="increaseCount()">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+    <p class="total">Total: ₹{{ getTotalPrice() }}</p>
+
+    <ion-button expand="block" class="pay-btn">Proceed to Pay</ion-button>
+  </div>
+</ion-content>

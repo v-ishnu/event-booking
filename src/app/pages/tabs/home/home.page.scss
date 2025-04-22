@@ -1,0 +1,184 @@
+.home-page{
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* General Page Styles */
+.bg-gradient-header {
+    background: linear-gradient(to right, #4c6ef5, #7e5bef); /* Gradient background */
+  }
+
+  .text-white {
+    color: white;
+  }
+
+  /* Banner Section */
+  .relative {
+    position: relative;
+  }
+
+  .relative img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+  }
+
+  .relative .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .relative h1 {
+    font-size: 2.5rem; /* Larger text for banner */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .relative a {
+    background-color: #4c6ef5;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #7e5bef;
+    }
+  }
+
+  /* Sorting and Events Section */
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  ion-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  ion-select {
+    width: 100%;
+  }
+
+  ion-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  ion-card img {
+    width: 100%;
+    height: 12rem; /* Adjust image size */
+    object-fit: cover;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  ion-card-content {
+    padding: 1rem;
+  }
+
+  ion-badge {
+    background-color: #4c6ef5; /* Badge color */
+    color: white;
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Title size */
+    font-weight: bold;
+    color: #4c6ef5;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+
+  div.flex {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #6b7280;
+  }
+
+  span.text-indigo-600 {
+    color: #4c6ef5;
+    font-size: 1.25rem;
+  }
+
+  ion-fab-button {
+    background-color: #4c6ef5;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #7e5bef;
+    }
+  }
+
+  ion-fab-button ion-icon {
+    font-size: 1.2rem; /* Increase icon size */
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .relative h1 {
+      font-size: 2rem;
+    }
+
+    .relative a {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+    }
+
+    ion-card img {
+      height: 10rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .original-price {
+    font-size: 0.875rem; /* Smaller font size */
+    color: #9ca3af; /* Light gray for original price */
+    position: relative; /* For pseudo-element positioning */
+    display: inline-block; /* Make it inline to behave like text */
+    margin-right: 0.5rem;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px; /* Control the thickness of the line */
+    text-decoration-color: #9ca3af; /* Match the color of the original price text */
+    line-height: 1.5; /* Adjust line-height to ensure proper spacing */
+  }

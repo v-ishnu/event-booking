@@ -1,0 +1,172 @@
+.login-content {
+    --background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .login-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  ion-item {
+    --background: transparent;
+    --border-color: transparent;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 10px;
+  }
+
+  ion-input {
+    background: #f4f7fa;
+    border-radius: 12px;
+    padding: 15px !important;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+
+    &:focus {
+      border-color: #2a5298;
+      box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+    }
+  }
+
+  .login-button {
+    --background: linear-gradient(to right, #2a5298, #1e3c72);
+    --border-radius: 12px;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease;
+
+    &:not([disabled]):hover {
+      transform: translateY(-2px);
+    }
+
+    &[disabled] {
+      --background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .signup-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+
+    a {
+      color: #2a5298;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #1e3c72;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 30px;
+      width: 95%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    ion-input {
+      padding: 12px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    ion-input {
+      padding: 10px !important;
+      font-size: 0.95rem;
+    }
+
+    .login-button {
+      --padding-top: 12px;
+      --padding-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .signup-link {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-height: 600px) {
+    .login-content {
+      padding: 10px;
+    }
+
+    .login-container {
+      margin: 10px auto;
+    }
+  }

@@ -1,0 +1,7 @@
+<!-- app.component.html -->
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+
+  <!-- Show bottom-nav only on certain pages -->
+  <app-bottom-nav *ngIf="showBottomNav"></app-bottom-nav>
+</ion-app>

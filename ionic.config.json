@@ -1,0 +1,7 @@
+{
+  "name": "ixBooking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

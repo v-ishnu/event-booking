@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true" class="signup-content">
+  <div class="signup-container">
+    <h1>Get Started</h1>
+    <p>Create your account to continue</p>
+
+    <form (ngSubmit)="onSignup(signupForm)" #signupForm="ngForm" class="signup-form">      <ion-item lines="none">
+        <ion-input
+          type="text"
+          placeholder="Full Name"
+          required
+          ngModel
+          name="fullName"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input
+          type="email"
+          placeholder="Email"
+          required
+          ngModel
+          name="email"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input
+          type="password"
+          placeholder="Password"
+          required
+          ngModel
+          name="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        type="submit"
+        [disabled]="!signupForm.form.valid"
+        class="signup-button"
+      >
+        Sign Up
+      </ion-button>
+    </form>
+
+    <ion-text class="login-link">
+      Already have an account?
+      <a routerLink="/login">Login</a>
+    </ion-text>
+  </div>
+</ion-content>

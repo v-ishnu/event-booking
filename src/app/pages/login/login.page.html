@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <div class="login-container">
+    <h1>Welcome Back</h1>
+    <p>Log in to your account to continue</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+      <ion-item lines="none">
+        <ion-input
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        type="submit"
+        [disabled]="loginForm.invalid || isLoggingIn"
+        class="login-button"
+      >
+        {{ isLoggingIn ? 'Logging in...' : 'Log In' }}
+      </ion-button>
+    </form>
+
+    <ion-text class="signup-link">
+      Don't have an account? <a routerLink="/signup">Sign Up</a>
+    </ion-text>
+  </div>
+</ion-content>
